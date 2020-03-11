@@ -1,0 +1,21 @@
+<div>
+	<h1>Tabella studenti</h1>
+	<table>
+		<tbody>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Cognome</th>
+				<th>Data nascita</th>
+				<th>Età</th>
+			</tr>
+			<tr ng-repeat="studente in $ctrl.studenti" ng-click="$ctrl.rowClick(studente)">
+				<td>{{studente.id}}</td>
+				<td>{{studente.nome}}</td>
+				<td>{{studente.cognome}}</td>
+				<td>{{studente.dataNascita}}</td>
+				<td>{{studente["età"]}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

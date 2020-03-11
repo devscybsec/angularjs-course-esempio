@@ -1,0 +1,15 @@
+{
+  "name": "courses-view",
+  "version": "1.0.0",
+  "description": "L'applicazione per la visualizzazione dei corsi'",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo '.. TODO ..'",
+    "deploy": "./deploy"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9"
+  }
+}

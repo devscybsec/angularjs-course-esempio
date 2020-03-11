@@ -1,0 +1,9 @@
+#/usr/bin/bash
+
+SERVER_DIR=~/git/javaee-course-spring-boot-esempi/spring-boot-esempio/src/main/resources/static
+
+echo 'Remove from server'
+rm -r $SERVER_DIR/* 2> /dev/null
+
+echo 'Copy to server'
+cp -r app/* $SERVER_DIR

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="coursesApp">
+<head>
+<meta charset="UTF-8">
+<title>Armando ha pagato il caffè, per questa settimana</title>
+<script src="lib/angular/angular.min.js"></script>
+<script src="app.module.js"></script>
+<script src="components/studente.module.js"></script>
+<script src="components/corso.service.js"></script>
+<script src="components/studente.service.js"></script>
+<script src="components/studente.controller.js"></script>
+<script src="components/studente-table/studente-table.component.js"></script>
+<script src="components/studente-form/studente-form.component.js"></script>
+</head>
+<body ng-controller="studenteController">
+	<studente-table studenti="service.studenti"></studente-table>
+	<studente-form studente="service.selectedStudente"></studente-form>
+</body>
+</html>

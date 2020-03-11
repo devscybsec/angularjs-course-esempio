@@ -1,0 +1,44 @@
+<div>
+	<h1>Form studente</h1>
+	<form name="studente">
+		<label>{{($ctrl.studente.id === 0) ? 'Nuovo' : ('Studente id:' + $ctrl.studente.id) }}</label><br>
+		<label for="nome">Nome:</label>
+		<input type="text" ng-model="$ctrl.studente.nome" name="nome" /><br>
+		<label for="cognome">Cognome:</label>
+		<input type="text" ng-model="$ctrl.studente.cognome" name="cognome" /><br>
+		<label for="dataNascita">Data nascita</label>
+		<input type="date" ng-model="$ctrl.studente.dataNascitaRaw" name="dataNascita" /><br>
+		<h2>Corsi</h2>
+		<table>
+			<tbody>
+				<tr>
+					<th>Nome</th>
+					<th>Descrizione</th>
+					<th>Professore</th>
+				</tr>
+				<tr ng-repeat="corso in $ctrl.corsoService.corsi" ng-click="$ctrl.addCorsiClick(corso)">
+					<td>{{corso.nome}}</td>
+					<td>{{corso.descrizione}}</td>
+					<td>{{corso.professore.nome}} {{corso.professore.cognome}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<h3>Seguiti</h3>
+		<table>
+			<tbody>
+				<tr>
+					<th>Nome</th>
+					<th>Descrizione</th>
+					<th>Professore</th>
+				</tr>
+				<tr ng-repeat="corso in $ctrl.studente.corsi" ng-click="$ctrl.removeCorsiClick(corso)">
+					<td>{{corso.nome}}</td>
+					<td>{{corso.descrizione}}</td>
+					<td>{{corso.professore.nome}} {{corso.professore.cognome}}</td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" ng-click="$ctrl.saveClick()" value="Salva" />
+		<input type="button" ng-click="$ctrl.resetClick()" value="Reset" />
+	</form>
+</div>

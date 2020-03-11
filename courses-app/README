@@ -1,0 +1,1 @@
+Modificare il file deploy inserendo al posto della variabile SERVER_DIR, la directory "static" corretta dell'applicazione spring-boot utilizzata 
